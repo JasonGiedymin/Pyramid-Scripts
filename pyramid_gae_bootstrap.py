@@ -23,7 +23,7 @@ Directions
 		  (tip: "which dev_appserver.py |xargs ls -l").
 		- Change _APP_MONKEY to the location of where you downloaded the App 
 		  Monkey scripts.
-		* Run this scrypt like so: "pyramid_gae_bootstrap.py MyApp"
+		* Run this script like so: "pyramid_gae_bootstrap.py MyApp"
 		  Where "MyApp" is the name of your new application.
 
 License
