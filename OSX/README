@@ -1,1 +1,26 @@
-Makefile README
+README
+
+[Makefile]
+	Having issues compiling Python modules/eggs/code on OSX 10.6.x? 
+	Are they 2.5.x modules?
+	Are you getting one of these error messages?:
+		* Compiling with an SDK that doesn't seem to exist: /Developer/SDKs/MacOSX10.4u.sdk
+		* cc1: error: unrecognized command line option "-Wno-long-double"
+		* lipo: can't figure out the architecture type of...
+		* Building for Intel with Mac OS X Deployment Target < 10.4 is invalid
+		* error: command 'gcc' failed with exit status 1
+	
+	If so, then use this Makefile.
+		- Replace your python Makefile with this while backing up your existing one. 
+		  For example:
+		  <shell>
+			git clone git://github.com/JasonGiedymin/Pyramid-Scripts.git
+			#or do a git archive master | tar -x -C <path> without having to clone
+
+			cp /Library/Frameworks/Python.framework/Versions/Current/lib/python2.5/config/Makefile \
+			/Library/Frameworks/Python.framework/Versions/Current/lib/python2.5/config/Makefile.orig
+
+			cp Pyramid-Scripts/OSX/Makefile \
+			/Library/Frameworks/Python.framework/Versions/Current/lib/python2.5/config/
+		  </shell>
+
